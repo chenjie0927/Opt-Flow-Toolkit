@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>The OSTRICH Calibration Toolkit</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<h1 class="bannerheading"><a href="index.html">OSTRICH</a></h1>
+				<nav class="links">
+					<ul>
+						<li><a href="pages/development/overview.html">Overview</a></li>
+						<li><a href="pages/development/algorithms/algorithms.html">Algorithms</a></li>
+						<li><a href="pages/development/setup/setup.html">Setup</a></li>
+						<li>
+							<div class="dropdown">
+								<a href="pages/development/solution/solution.html"<button class="dropbtn">
+									Solution
+									<i class="fa fa-caret-down"></i></a>
+								</button>
+								<div class="dropdown-content">
+									<a href="pages/development/solution/running.html">Running OSTRICH</a>
+									<a href="pages/development/solution/building.html">Building OSTRICH</a>
+								</div>
+							</div>
+						</li>
+						<li><a href="pages/development/output/output.html">Output</a></li>
+						<li><a href="pages/development/examples/examples.html">Examples</a></li>
+						<li><a href="pages/releases.html">Releases</a></li>
+					</ul>
+				</nav>
+				<nav class="main">
+					<ul>
+						<li class="menu">
+							<a class="fa-bars" href="#menu">Menu</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+			<!-- Menu -->
+			<section id="menu">
+				<!-- Links -->
+				<section>
+					<ul class="links">
+						<li>
+							<a href="pages/development/overview.html">
+								<h3>Overview</h3>
+								<p>The basics of OSTRICH</p>
+							</a>
+						</li>
+						<li>
+							<a href="pages/development/algorithms/algorithms.html">
+								<h3>Algorithms</h3>
+								<p>Algorithms available within OSTRICH</p>
+							</a>
+						</li>
+						<li>
+							<a href="pages/development/setup/setup.html">
+								<h3>Setup</h3>
+								<p>Organzing an OSTRICH analysis</p>
+							</a>
+						</li>
+						<li>
+							<a href="pages/development/solution/solution.html">
+								<h3>Solution</h3>
+								<p>Running an OSTRICH analysis</p>
+							</a>
+						</li>
+						<li>
+							<a href="pages/development/output/output.html">
+								<h3>Output</h3>
+								<p>Output of an OSTRICH analysis</p>
+							</a>
+						</li>
+						<li>
+							<a href="pages/development/examples/examples.html">
+								<h3>Examples</h3>
+								<p>Examples using OSTRICH</p>
+							</a>
+						</li>
+						<li>
+							<a href="pages/contributing.html">
+								<h3>Contributing</h3>
+								<p>Contribute to OSTRICH</p>
+							</a>
+						</li>
+					</ul>
+				</section>
+			</section>
+
+			<!-- Main -->
+			<div id="main">
+				<!--Introduction text-->
+				<article class="post">
+					<header>
+						<div class="title">
+								<h2><a href="#">Welcome to OSTRICH!</a></h2>
+						</div>
+					</header>
+					<p align="justify">
+						The Optimization Software Toolkit for Research Involving Computational Heuristics (OSTRICH) is a model-independent program that automates 
+						the processes of model calibration and design optimization without requiring the user to write any additional software. Typically, users 
+						only need to fill out a few required portions of the OSTRICH input file (i.e. ostIn.txt) and create template model input files. Users may 
+						also activate and configure a variety of optional features, including: parallel processing, model pre-emption, algorithm restarts, parameter 
+						statistics and regression diagnostics, telescoping parameter bounds, predictive uncertainty, non-ASCII model I/O, and user-defined initial 
+						parameter sets. Finally, users with skill in code or script development (e.g. C/C++, FORTRAN, Java, R, MATLAB, Python, bash/bat, etc.) may 
+						also wish to take advantage of OSTRICH’s parameter correction feature. It allows users to correct candidate parameter sets based on 
+						rules-of-thumb or expert judgment that would otherwise be difficult to encapsulate as optimization constraints.
+					</p>
+					<p align="justify">
+						This manual describes the configuration and usage of OSTRICH. The <a href="pages/development/overview.html">overview</a> provides a brief summary of 
+						the currently supported optimization/calibration algorithms and regression statistics/diagnostics. The <a href="pages/development/setup/setup.html">setup</a> 
+						pages describe the OSTRICH input file and its various configuration sections. The majority of these sections are optional and others will only 
+						be processed when a specific algorithm, objective function, or feature is activated. The <a href="pages/development/solution/solution.html">solution</a> pages 
+						provide guidance on running OSTRICH in serial or parallel, and the <a href="pages/development/output/output.html">output</a> pages describes various output files 
+						generated by OSTRICH. Finally, the <a href="pages/development/examples/examples.html">examples</a> section reviews the set of examples that accompany the 
+						OSTRICH distribution and provides instructions for running them on a Windows-based machine.
+					</p>
+					<h1>Tell us how you use OSTRICH</h1>
+					<p align="justify">
+						If you use OSTRICH, please reach out and let the community know. It's helpful for us to track who and how much OSTRICH is being utilized. If
+						you have a publication that uses OSTRICH, we'd like to add it to our community list of publications. You can send an email to dloney@usbr.gov 
+						to have your information included.
+					</p>
+				</article>				
+			</div>
+
+			<!-- Sidebar -->
+			<section id="sidebar">
+
+				<!-- Intro -->
+					<section id="intro">
+						<a href="https://www.usbr.gov/" class="logo"><img src="images/logos/reclamation.png" alt="" /></a>
+						<a href="https://uwaterloo.ca/" class="logo"><img src="images/logos/waterloo.png" alt="" /></a>
+						<a href="http://www.buffalo.edu/" class="logo"><img src="images/logos/buffalo.png" alt="" /></a>
+						<header>
+							<h2>OSTRICH</h2>
+							<p>A model independent and multi-algorithm optimization and calibration tool</a></p>
+						</header>
+					</section>
+
+			</section>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

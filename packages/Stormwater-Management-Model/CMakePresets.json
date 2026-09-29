@@ -1,0 +1,123 @@
+{
+  "version": 7,
+  "configurePresets": [
+    { "name": "cfg-base", "hidden": true, "binaryDir": "${sourceDir}/build/${presetName}", "installDir": "${sourceDir}/install/${presetName}" },
+    { 
+      "name": "windows", 
+      "hidden": true, 
+      "generator": "Visual Studio 17 2022", 
+      "inherits": "cfg-base"
+    },
+    { 
+      "name": "linux", 
+      "hidden": true, 
+      "generator": "Ninja Multi-Config", 
+      "inherits": "cfg-base"
+    },
+    {
+      "name": "darwin",
+      "hidden": true,
+      "generator": "Xcode", 
+      "inherits": "cfg-base"
+    },
+    { "name": "cfg-release", "hidden": true, "cacheVariables": { "BUILD_TESTS": "OFF" } },
+    { "name": "cfg-debug", "hidden": true, "cacheVariables": { "BUILD_TESTS": "ON" } },
+    {
+      "name": "windows-release",
+      "displayName": "Windows Release",
+      "description": "Configuration for Release on Windows host",
+      "inherits": ["windows", "cfg-release"]
+    },
+    {
+      "name": "windows-debug",
+      "displayName": "Windows Debug",
+      "description": "Configuration for Debug on Windows host",
+      "inherits": ["windows", "cfg-debug"]
+    },
+    {
+      "name": "linux-release",
+      "displayName": "Linux Release",
+      "description": "Configuration for Release on Linux host",
+      "inherits": ["linux", "cfg-release"]
+    },
+    {
+      "name": "linux-debug",
+      "displayName": "Linux Debug",
+      "description": "Configuration for Debug on Linux host",
+      "inherits": ["linux", "cfg-debug"]
+    },
+    {
+      "name": "darwin-release",
+      "displayName": "Darwin Release",
+      "description": "Configuration for Release on Darwin host",
+      "inherits": ["darwin", "cfg-release"]
+    },
+    {
+      "name": "darwin-debug",
+      "displayName": "Darwin Debug",
+      "description": "Configuration for Debug on Darwin host",
+      "inherits": ["darwin", "cfg-debug"]
+    }
+  ],
+  "buildPresets": [
+    { "name": "build-release", "hidden": true, "configuration": "Release" },
+    { "name": "build-debug",   "hidden": true, "configuration": "Debug" },
+    {
+      "name": "windows-release",
+      "description": "Builds Windows Release",
+      "configurePreset": "windows-release",
+      "inherits": "build-release"
+    },
+    {
+      "name": "windows-debug",
+      "description": "Builds Windows Debug/Test",
+      "configurePreset": "windows-debug",
+      "inherits": "build-debug"
+    },
+    {
+      "name": "linux-release",
+      "description": "Builds Linux Release",
+      "configurePreset": "linux-release",
+      "inherits": "build-release"
+    },
+    {
+      "name": "linux-debug",
+      "description": "Builds Linux Debug/Test",
+      "configurePreset": "linux-debug",
+      "inherits": "build-debug"
+    },
+    {
+      "name": "darwin-release",
+      "description": "Builds Darwin Release",
+      "configurePreset": "darwin-release",
+      "inherits": "build-release"
+    },
+    {
+      "name": "darwin-debug",
+      "description": "Builds Darwin Debug/Test",
+      "configurePreset": "darwin-debug",
+      "inherits": "build-debug"
+    }
+  ],
+  "testPresets": [
+    { "name": "test-debug", "hidden": true, "configuration": "Debug", "output": { "outputOnFailure": true } },
+    {
+      "name": "windows-debug",
+      "description": "Run tests on Windows host",
+      "configurePreset": "windows-debug",
+      "inherits": "test-debug"
+    },
+    {
+      "name": "linux-debug",
+      "description": "Run tests on Linux host",
+      "configurePreset": "linux-debug",
+      "inherits": "test-debug"
+    },
+    {
+      "name": "darwin-debug",
+      "description": "Run tests on Darwin host",
+      "configurePreset": "darwin-debug",
+      "inherits": "test-debug"
+    }
+  ]
+}

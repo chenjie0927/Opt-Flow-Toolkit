@@ -1,0 +1,45 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+make/Ostrich
+make/OstrichMPI
+
+# make logs
+make/my_make*.log
+
+# MacOS files
+**.DS_Store
+src/compare_ostrich_distributions.sh
+src/ignore_these_changed_files.txt
+src/list_of_changed_files.txt
+include/compare_ostrich_distributions.sh
+include/list_of_changed_files.txt
